@@ -1,0 +1,127 @@
+:root {
+    --mainBlue:#2a2a72;
+    --lightBlue:#009ffd;
+    --mainWhite:#f3f3f3;
+    --mainDark:#232528;
+    --mainYellow:#ffa400;
+   }
+
+   .details {
+       max-width: 1440px;
+       margin: 0% auto;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+   }
+
+   .titles {
+    font-size: 40px;
+    color: var(--mainBlue);
+    margin-top: 100px;
+    font-weight: 400;
+   }
+
+   .phone {
+       width: 100%;
+       display: flex;
+       height: 550px;
+   }
+
+   .imageWrap {
+       width: 50%;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+   }
+
+   .phoneDetails {
+       width: 50%;
+       display: flex;
+       flex-direction: column;
+       padding-right: 130px;
+   }
+
+   .phoneDetails h1 {
+       margin-top: 40px;
+       font-weight: 400;
+   }
+
+   .phoneDetails h2 {
+    color: grey;
+    letter-spacing: 8px;
+    font-weight: 400;
+  }
+
+  .phoneDetails h3 {
+       font-weight: 800;
+       color: var(--mainBlue);
+       font-size: 25px;
+  }
+  
+   .phoneDetails p {
+       color: grey;
+       font-weight: 400;
+       font-size: 20px;
+   }
+
+   .btn2 {
+    width: 180px;
+    height: 40px;
+    background-color: transparent;
+    border: 1.5px solid var(--lightBlue);
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--lightBlue);
+    transition: 0.5s all ease;
+    margin-top: 20px;
+  }
+  
+  .btn2:hover {
+    transition: 0.5s all ease;
+    color: var(--mainBlue);
+    background-color: var(--lightBlue);
+  }
+
+  .btn3 {
+    width: 140px;
+    height: 40px;
+    background-color: transparent;
+    border: 1.5px solid var(--mainYellow);
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--mainYellow);
+    transition: 0.5s all ease;
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+  
+  .btn3:hover {
+    transition: 0.5s all ease;
+    color: var(--mainBlue);
+    background-color: var(--mainYellow);
+  }
+
+  @media screen and (max-width: 767px) {
+    .phone {
+      width: 100%;
+      flex-direction: column;
+      height: auto;
+      padding-bottom: 50px;
+  }
+  .imageWrap {
+    width: 100%;
+}
+
+.phoneDetails {
+    width: 100%;
+    padding-right: 0px;
+    padding: 0px 20px;
+}
+
+.phoneDetails h1 {
+  font-size: 30px;
+}
+  }
