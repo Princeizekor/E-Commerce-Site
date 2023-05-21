@@ -23,6 +23,9 @@ body{
   align-items: center;
   background-color: var(--mainBlue);
   padding: 0px 50px;
+  position: sticky;
+  z-index: 10000000000;
+  top: 0%;
 }
 
 .navbar div {
@@ -38,7 +41,7 @@ body{
 }
 
 .btn {
-  width: 120px;
+  width: 80px;
   height: 40px;
   background-color: transparent;
   border: 1.5px solid var(--lightBlue);

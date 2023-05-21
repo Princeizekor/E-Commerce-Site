@@ -6,6 +6,19 @@
     --mainYellow:#ffa400;
    }
 
+   .cart {
+    height: 90vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0% auto;
+   }
+
+   .cart h1 a {
+    text-decoration: none;
+   }
+
    .my-cart {
        width: 100%;
        display: flex;
@@ -14,14 +27,19 @@
        height: auto;
    }
 
-   .my-cart h1 {
+   .my {
        font-size: 40px;
        font-weight: 800;
        letter-spacing: 5px;
+       text-align: center;
    }
 
-   .my-cart h1 span {
+   .myspan {
        color: var(--mainBlue);
+   }
+
+   .empty {
+    text-align: center;
    }
 
    .cart-details {
