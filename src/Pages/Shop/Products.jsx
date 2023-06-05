@@ -26,7 +26,7 @@ function Products(props) {
           <p className="color">${price}</p>
         </div>
       </div>
-      {openModal && <Mod />}
+      {openModal && <Mod closeModal={setOpenModal}/>}
     </>
   );
 }

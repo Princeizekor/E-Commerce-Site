@@ -4,16 +4,21 @@ import Modal from './Modal'
 import { storeProducts } from '../data'
 
 
-function Mod() {
-    const { cartItems } = useContext(shopContent)
+function Mod({ closeModal }) {
+  const { cartItems } = useContext(shopContent)
   return (
     <div className="modal">
-                {storeProducts.map((product) => {
-          if (cartItems[product.id] !== 0) {
-            return <Modal data={product} />
-          }
+      {storeProducts.map((product) => {
+        if (cartItems[product.id] !== 0) {
+          return (
+          <div className="modal-content" key={product?.id}>
+            <Modal data={product}/>
+              <button className="shop" onClick={() => closeModal(false)}>Continue Shopping</button>
+            </div>
+      )}
 
-        })}
+      })}
+
     </div>
   )
 }

@@ -26,14 +26,14 @@ function Shopcontent(props) {
   }
 
   const addToCart = (itemId) => {
-    setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] = 1 }))
+    setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }))
   }
   const removeFromCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }))
   }
 
   const removeFromCarts = (itemId) => {
-    setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - cartItems }))
+    setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] }))
   }
 
   const updateCartItemAmount = (newAmount, itemId) => {

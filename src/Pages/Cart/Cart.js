@@ -4,7 +4,7 @@ import { storeProducts } from '../../data'
 import { shopContent } from '../../Context/shop-content'
 
 function Cart() {
-  const { cartItems, removeFromCart, getTotalCartAmount } = useContext(shopContent)
+  const { cartItems, removeFromCarts, getTotalCartAmount } = useContext(shopContent)
   const totalAmount = getTotalCartAmount()
   return (
     totalAmount > 0 ?
@@ -25,7 +25,7 @@ function Cart() {
 
         })}
         <div className="cart-control">
-          <button onClick={() => removeFromCart()}>CLEAR CART</button>
+          <button onClick={() => removeFromCarts()}>CLEAR CART</button>
           <p>SUBTOTAL : $ {totalAmount}</p>
         </div>
       </>
