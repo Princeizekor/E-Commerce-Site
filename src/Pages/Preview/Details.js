@@ -26,6 +26,10 @@ function Details() {
     getData()
   }, [])
 
+  const handleAdded = () => {
+    addToCart(id)
+  }
+
   return (
     <div className="details">
       <h1 className="titles">{detail?.title}</h1>
@@ -42,7 +46,7 @@ function Details() {
           <p>{detail?.info}</p>
           <div className="select">
             <Link to="/"><button className="btn2" >Back To Products</button></Link>
-            <button className="btn3" onClick={() => addToCart(id)}>Add To Cart {cartItemAmount > 0 && <>({cartItemAmount})</>}</button>
+            <button className="btn3" onClick={handleAdded}>{cartItemAmount !== 0 ? 'In Cart' : 'Add To Cart'}{cartItemAmount > 0 && <>({cartItemAmount})</>}</button>
 
           </div>
         </div>

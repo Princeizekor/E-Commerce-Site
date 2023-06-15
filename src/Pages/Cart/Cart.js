@@ -4,7 +4,7 @@ import { storeProducts } from '../../data'
 import { shopContent } from '../../Context/shop-content'
 
 function Cart() {
-  const { cartItems, removeFromCarts, getTotalCartAmount } = useContext(shopContent)
+  const { cartItems, getTotalCartAmount, clearCart } = useContext(shopContent)
   const totalAmount = getTotalCartAmount()
   return (
     totalAmount > 0 ?
@@ -20,16 +20,16 @@ function Cart() {
         </div>
         {storeProducts.map((product) => {
           if (cartItems[product.id] !== 0) {
-            return <Mycart data={product} />
+            return <Mycart key={product.id} data={product} />
           }
 
         })}
         <div className="cart-control">
-          <button onClick={() => removeFromCarts()}>CLEAR CART</button>
+          <button onClick={clearCart}>CLEAR CART</button>
           <p>SUBTOTAL : $ {totalAmount}</p>
         </div>
       </>
-      : <h1 className='empty'>YOUR CART IS EMPTY</h1>
+      : <h1 className='empty'>YOUR CART IS CURRENTLY EMPTY</h1>
   )
 }
 

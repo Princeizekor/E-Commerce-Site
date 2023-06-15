@@ -8,7 +8,7 @@ function Shop() {
             <h1 className='title'>Our <span>Products</span></h1>
             <div className="ProductOne">
                 {storeProducts.map((product) => (
-                    <Products data={product} />
+                    <Products key={product.id} data={product} />
                 ))}
             </div>
         </div>
